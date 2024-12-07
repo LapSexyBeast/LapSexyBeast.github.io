@@ -1,0 +1,28 @@
+/* Navigation menu*/ 
+.nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: -2;
+    padding: 0;
+    background-color: rgb(17,75,95);
+    overflow: hidden;
+}
+.nav li{
+    float: left;
+}
+.nav li a, .dropbtn {
+    display: inline-block;
+    color: rgb(241,154,62);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+.nav li:hover {
+    background-color: rgb(241,154,62);
+}
+
+.nav li.dropdown {
+    display: inline-block;
+  }

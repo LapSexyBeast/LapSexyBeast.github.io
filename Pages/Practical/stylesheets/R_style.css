@@ -1,0 +1,47 @@
+h2 {
+    color: rgb(223, 66, 81);
+}
+
+h3 {
+    color: rgb(219,84,97);
+}
+
+.nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: -2;
+    padding: 0;
+    background-color: rgb(17,75,95);
+    overflow: hidden;
+}
+.nav li{
+    float: left;
+}
+.nav li a, .dropbtn {
+    display: inline-block;
+    color: rgb(241,154,62);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+.nav li:hover {
+    background-color: rgb(241,154,62);
+}
+
+.nav li.dropdown {
+    display: inline-block;
+  }
+
+/*Resume Background */ 
+.paper {
+    border: 1px solid black;
+    background-image: url("../Pages/Resume/Img/parchment-990471_960_720_webp.jpg");
+    
+    background-color: #cccccc;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

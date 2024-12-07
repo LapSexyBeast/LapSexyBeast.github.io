@@ -1,0 +1,98 @@
+/* Navigation menu*/ 
+.nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: -2;
+    padding: 0;
+    background-color: rgb(17,75,95);
+    overflow: hidden;
+}
+.nav li{
+    float: left;
+}
+.nav li a, .dropbtn {
+    display: inline-block;
+    color: rgb(241,154,62);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+.nav li:hover {
+    background-color: rgb(241,154,62);
+}
+
+.nav li.dropdown {
+    display: inline-block;
+  }
+/* Responsive */
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99;
+}
+/*Media Query*/
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+
+/* Image Gallery */
+
+div.gallery {
+    border: 1px solid black;
+}
+
+div.gallery:hover {
+    border: 5px solid black;
+
+}
+
+div.gallery img{
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+}
+div.gallery img:hover{
+    size:200%;
+}
+div.description{
+    padding: 15px;
+    text-align: center;
+}
+/* Fish */
+
+.fish h2{
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    background-color: red;
+    justify-content: space-evenly;
+}
+/* Devider*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/* Plants */
+
+.plant h2{
+    display: flex;
+    border: 1px solid black;
+    margin: 50px auto;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
