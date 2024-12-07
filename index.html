@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+        <!-- Playwrite, Saira, Tektur-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet:wght@100..400&family=Saira:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+    <title>L.A.P. IV: Main Page</title>
+</head>
+<header>
+<!-- Site wide Nav menu w/ dropdown and Logo -->
+
+
+</header>
+<body>
+    <div id="heroText" class="heroText">
+        <h1> 
+            <div>
+                <!-- would like to stop dots when page is full width (ie only appear when letters are stacked vertically) -->
+            <span class="span">L</span>AWRENCE 
+            <span class="span">A</span>lexnader 
+            <span class="span">P</span>hilbert
+            </div>
+        </h1>
+        <h2>_L.A.P_<span class="hoverColour">IV</span><span id="blinking">_</span></h2>
+        
+    </div>
+<!-- darkmode buttom -->
+    <button id="colourSwitch">Toggle Dark Mode</button>
+    <br>    
+    <hr>
+<!-- Nav Menu -->
+    <div id="navMenu">
+        <nav>
+            <ul>
+                <h5>Nav:</h5>
+                <!-- <li><a href="./styleGuide/styleGuide.html">Internal</a></li> -->
+                <li><a href="./Pages/resume.html">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <h5>/(o.<)/</h5>
+            </ul>
+        </nav>
+
+    </div>
+    <hr>
+
+<!-- About me  -->
+    <div id="about">
+        <h2>About: <span>L.A.P_IV_</span></h2>
+<!-- Images of me for different screen size -->
+         <div class="flexBox">
+            <picture>
+                <!-- different images depending on browser size - what is vw?
+                https://www.builder.io/blog/fast-images - site about picture optimization-->
+                <!-- https://placehold.co/ -->
+                <source 
+                    media="(max-width:799px)" 
+                    type="image/avif"
+                    srcset="./Images/meWithCoffee.jpg, https://placehold.co/600x400, /image.png?width=400 400w, /image.png?width=800 800w"
+                    alt="the famed Lawrence A Philbert drinking professional coffee, profesionally"
+                    >
+                <source 
+                    media="(min-width:800px)" 
+                    type="image/webp"
+                    srcset="./Images/meWithFlower.jpg, ./Images/meWithFlower.jpg, ./Images/meWithFlower.jpg, ./Images/meWithFlower.jpg"
+                    alt="Me with a flower, very in touch with nature"
+                    >
+                <img 
+                src="./Images/justMe.jpg" 
+                    srcset="./Images/meWithCoffee.jpg, ./Images/meWithCoffee.jpg, ./Images/meWithCoffee.jpg, ./Images/meWithCoffee.jpg"
+                    sizes="(max-width: 800px) 100vw, 50vw"
+                    loading="lazy" 
+                    decoding="async"
+                    alt="A picture of me; Very handsome" 
+                />
+            </picture>
+            <p>Hello, Nice to make you aquaintance!<br>
+                <br>
+                My Name, is Lawrence Alexander Philbert - But you can call me 'Alex'.
+                Please HIRE ME, I NEED A JOB
+            </p>
+        </div>
+    <hr>
+    <hr>
+<!-- List of my hobbies  -->
+        <h5>Things I enjoy</h5>
+        <ul>
+            <li>Fish</li>
+            <li>Plants</li>
+            <li>Video Games:
+                <ul>
+                    <li>WORLD OF WARCRAFT</li>
+                    <li>League of Legends</li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+    <div id="skills">
+        <h4>Skills</h4>
+        <h5><a href="./Pages/resume.html">See my Resume!</a></h5>
+        <p>Read it and download a copy if you so choose </p>
+        <div>
+            <h5>Languages</h5>
+            <div >
+                <p>Html/Css</p>
+                <p>Python</p>
+                <p>and more to come</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="contact">
+        <h4>Contact</h4>
+        <p>Reach out to me using one of the links below!</p>
+    </div>
+
+<!-- script -->
+    <script src="./script.js"></script>
+
+    <script>
+        // Ensure the typeWriter function is called after the DOM is fully loaded
+        window.onload = function() {
+            typeWriter(); // Call the typeWriter function after the page loads
+        };
+    </script>
+</body>
+<!-- Footer section -->
+        <!-- Site wide Nav menu w/ dropdown and Logo -->
+
+        <!-- Need to adjust for menu to go upwards -->
+<footer id="footer">
+        <div class="navMenub">
+            <a href="#heroText">Home</a>
+            <div class="dropup">
+                <button class="dropupbtn">Contact
+                    <i class="fa fa-caret-up"></i>
+                </button>
+                <div class="dropup-content">
+                    <!-- replace with mailto form link https://www.w3docs.com/snippets/html/how-to-create-mailto-forms.html-->
+                    <a href="mailto:ZanderPhilbert@gmail.com?subject=Website">Email Me!</a>
+                    <a href="https://www.linkedin.com/in/lawrence-philbert-279b34329/">Linkedin</a>
+                    <!-- <a href="#">Link 3</a> -->
+                </div>
+            </div>
+        </div>
+    <p>&#169 LAP_IV &#8482</p>
+</footer>
+</html>

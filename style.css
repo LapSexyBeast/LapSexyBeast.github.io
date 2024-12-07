@@ -1,0 +1,699 @@
+
+/* Document Colours */
+/* 60/30/10 rule for colours */
+:root{
+    /* stie colours  */
+    --priColour: #0A0A0A;
+    --neutralColour: #C2C2C2;
+    --accentColour:  #EC0909;
+    --ctaColour:  #4062BB;
+    --hoverColour:  #52489C;
+    --actionColour: #59C3C3;
+    /* Site sizes for calculations (this did not work)*/
+    --baseSize: 16px;
+    /* Site Fonts */
+    --mainfont: Tektur;
+    --secondaryFont: Playwrite DK Uloopet;
+    --tertiaryFont: Saira;
+}
+/* End Document Colours */
+/* Page Fonts and Sizes
+Font-Sizes: Golden Ratio (x1.618)
+Base: 1rem/16.00px
+*/
+h1 {
+    font-family: "Tektur", serif;
+    font-size: 90px;
+    color: var(--neutralColour);
+    margin: 0 0;
+}
+
+h2 {
+    font-family:Playwrite DK Uloopet;
+    font-size: 78px;
+    color: var(--neutralColour);
+    margin: 0 0;
+
+}
+h3 {
+    font-family:Playwrite DK Uloopet;
+    font-size: 67.77px;
+    color: var(--neutralColour);
+    margin: 0 0;
+
+
+}
+
+h4 {
+    font-family:Playwrite DK Uloopet;
+    font-size: 41.89px;
+    color: var(--neutralColour);
+    margin: 0 0;
+    display: inline-flex;
+
+}
+h5, summary {
+    font-family: Saira;
+    font-size: 24.88px;
+    color: var(--neutralColour);
+    margin: 0 0;
+
+}
+
+p {
+    font-family: Saira;
+    font-size: var(--baseSize) ;
+    color: var(--neutralColour);
+    margin: 0 0;
+
+}
+
+li {
+    font-family: Saira;
+    font-size: 18px;
+}
+
+li:hover, summary:hover{
+    font-size: 32px;
+}
+/* End of Fonts  */
+
+
+/* Colours */
+/* Default light mode styles */
+.priColour {
+    color: var(--neutralColour);
+}
+.accentColour {
+    color: var(--accentColour);
+}
+
+.ctaColour {
+    color: var(--ctaColour);
+}
+
+.hoverColour {
+    color: var(--hoverColour);
+}
+.hoverColour:hover {
+    color: whitesmoke;
+    text-shadow: 2px 2px 12px var(--hoverColour);
+}
+.actionColour{
+    color: var(--actionColour);
+}
+
+.cta{
+    color: var(--ctaColour);
+}
+
+hr {
+    color: var(--neutralColour);
+}
+
+p:hover, h5:hover, h4:hover, h3:hover, h2:hover {
+    color: var(--hoverColour);
+}
+/* End Normal */
+/* Dark mode default styles */
+html.dark-mode {
+    background-color: var(--neutralColour); /* Lighter background */
+    color: var(--priColour); /* Dark text */
+}
+html.dark-mode .priColour{
+    background-color: var(--priColour);
+}
+html.dark-mode .accentColour {
+    background-color: var(--ctaColour);
+}
+
+html.dark-mode .ctaColour {
+    background-color: var(--hoverColour);
+}
+
+html.dark-mode .hoverColour {
+    background-color: var(--actionColour);
+}
+html.dark-mode .actionColour{
+    background-color: var(--accentColour);
+}
+
+html.dark-mode .cta{
+    color: var(--accentColour);
+}
+
+html.dark-mode hr {
+    height: 2px;
+    border: none;
+    background-color: var(--priColour);
+}
+
+html.dark-mode h1{
+    color: var(--priColour);
+    text-shadow: 2px 2px 8px var(--ctaColour);
+}
+
+
+/* Darkmode: h2-5 + p + ul+ li */
+html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.darkmode summary, html.dark-mode p, html.dark-mode ul, html.dark-mode li a{
+    color: var(--priColour);
+
+}
+
+html.dark-mode h2:hover, html.dark-mode h3:hover, html.dark-mode h4:hover, html.dark-mode h5:hover, html.darkmode summary:hover, html.dark-mode p:hover{
+    color: var(--accentColour);
+
+}
+
+html.dark-mode li a:hover, html.dark-mode .cta:hover{
+    color: var(--ctaColour);
+
+}
+/*End Darkmode */
+/* End Colour Examples  */
+
+.circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.colour {
+    margin: 0 5px;
+    
+}
+
+#flex {
+    display: flex;
+    justify-content: space-between;
+}
+#colours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#typography {
+    text-align: right;
+}
+
+
+/* END COLOURS  */
+
+
+/*Generic Button Styling */
+button {
+    color: var(--priColour);
+    background-color: var(--neutralColour);
+    border-radius: 15%;
+}
+
+
+
+/* END GENERIC STYLING  */
+
+/* Viewport */
+/* MEDIA QUERY SIZES 
+# phone
+#768 tablet
+#1080 desktop 
+#1440 */
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--priColour);
+    color: white;
+
+    /*Mobile*/
+    @media only screen and (max-width: 600px) {
+        /*class or ID {background: colour;}*/
+        width: 600px;
+        max-width: 600px;
+
+    }
+    /*Small devices*/
+    @media only screen and (max-width: 600px) {
+        /*class or ID {background: colour;}*/
+        h1, span{
+            font-size: 30px;
+            color: white;
+            text-shadow: 3px 3px 3px #C2C2C2;
+        }
+        h1 span {
+            background-color: var(--accentColour);
+        }
+
+        h2{
+            font-size: 25px;
+        }
+        
+        h3, h4, h5{
+            font-size: 20px
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+    }
+    /*Med devices*/
+    @media only screen and (max-width:768px) {
+        /*class or ID {background: colour;}*/
+        padding: 10px;
+        font-size: 24px;
+
+
+    /* Desktop Styles */
+    @media only screen and (min-width: 769px) {
+  
+
+    }
+    /*Large devices*/
+    @media only screen and (max-width:992px) {
+        /*class or ID {background: colour;}*/
+        
+
+    }
+    /*Large Screen*/
+    @media only screen and (max-width:1200px) {
+        /*class or ID {background: colour;}*/
+        
+
+    }
+    /* Large Deskto */
+    @media only screen and (max-width:1440px) {
+        /*class or ID {background: colour;}*/
+        
+        padding: 20px;
+
+    }
+    /* HD*/
+    @media only screen and (max-width:1920) {
+        /*class or ID {background: colour;}*/
+        
+        padding: 20px;
+
+    }
+    /*School Ultra-Wide*/
+    @media only screen and (max-width:3440px) {
+        /*class or ID {background: colour;}*/
+
+    }
+}
+
+
+body {
+    margin: 5px 15px;
+}
+
+
+
+/* Fonts */
+
+/* Got variable fonts to do stuff maybe */
+/* // <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 400 to 900 */
+
+.tektur-<uniquifier> {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 100 to 900 */
+
+.saira-<uniquifier> {
+  font-family: "Saira", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 100 to 400 */
+
+.playwrite-dk-uloopet-<uniquifier> {
+  font-family: "Playwrite DK Uloopet", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+
+/* Navigation menu styling  */
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    
+}
+nav ul:hover{
+vertical-align: middle;
+}
+nav h5:hover{
+    color: var(--accentColour);
+
+}
+nav li{
+    color: var(--neutralColour);
+    list-style-type: iconique;
+    list-style: disclosure-closed;
+}
+
+nav li:hover {
+    color: var(--accentColour);
+
+}
+
+nav li a{
+    color: var(--neutralColour);
+    cursor: pointer;
+    text-decoration: none;
+    height: 2px;
+}
+
+nav li a:hover{
+    text-transform: uppercase;
+    text-shadow: 2px 2px 15px var(--hoverColour);
+    animation: rainbow 2s linear infinite;
+    color: var(--actionColour);
+    font-size: 35px;
+
+}
+
+@counter-style iconique {
+    system: cyclic;
+    symbol: "\1F44D";
+    suffix: " ";
+}
+
+@keyframes rainbow {
+    0% {
+        background: linear-gradient(#008000, #00ff00);
+        -webkit-background-clip: text;
+    }
+
+    100% {
+        background: linear-gradient(#3CE7D7, #000FFF);
+        -webkit-background-clip: text;
+    }
+}
+
+/* Header Nav - Site wide and with logo */
+/* Navbar container */
+.navMenu {
+  overflow: hidden;
+  background-color: #333;
+  font-family: var(--tertiaryFont);
+  margin: 5px 0;
+}
+
+
+/* Links inside the navbar */
+.navMenu a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* The dropdown container */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a background color to navbar links on hover */
+.navMenu a:hover, .dropdown:hover .dropbtn {
+  background-color: var(--accentColour);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--neutralColour);
+  color: var(--accentColour);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* dropUP */
+/* Bottom Nav */
+.navMenub a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navMenub a:hover, .dropupbtn:hover, .dropup-content a:hover {
+    color: var(--actionColour);
+}
+.navMenub {
+    background-color: #333;
+    font-family: var(--tertiaryFont);
+    margin: 5px 0;
+}
+
+.dropupbtn {
+  background-color: inherit;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 120px;
+  bottom: 100%;
+  z-index: 2;
+}
+
+.dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.dropup-content a:hover{
+    background-color: transparent;
+    
+}
+
+.dropup:hover .dropup-content {
+  display: block;
+  cursor: pointer;
+}
+
+.dropup:hover .dropbtn {
+  background-color: #2980B9;
+}
+
+/* End Navigation Menu */
+
+
+/* Animations */
+    /* Typewritter effect */
+#blinking {
+    animation: blink 4s infinite;
+}
+.flexBox {
+    display: flex;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    
+}
+/* About me [Section] */
+
+#about p{
+    margin: 5px 30px;
+}
+
+#about img{
+    width: 350px;
+    height: auto;
+}
+/*Main Page: About: L.A.P_IV_*/
+#about span{
+    font-family: var(--mainfont);
+    ;
+    
+}
+
+#about img, #about picture {
+    margin: 5px 10px;
+
+}
+
+/* HERO SECTION */
+
+#heroText {
+    display: flex;
+    justify-content: center;
+}
+
+
+#about.cta span{
+    color: #52489C;
+
+}
+
+#heroText span{
+text-wrap: nowrap;
+
+}
+#heroText h1:hover{
+    color: var(--white);
+}
+
+.span {
+    color: var(--priColour);
+    text-shadow: 2px 5px 15px var(--accentColour), 15px 7.5px 8px var(--hoverColour), -15px -5px 8px var(--actionColour);
+}
+
+.span:hover{
+    text-emphasis: filled double-circle;
+    text-emphasis-color: var(--priColour);
+    text-decoration-style: var(--accentColour);
+    color: var(--accentColour);
+    text-shadow: 2px 5px 15px var(--priColour), 15px 7.5px 8px var(--actionColour), -15px -5px 8px var(--actionColour);
+
+}
+
+/* END Hero Section */
+
+
+
+/* Skills */
+#skills a{
+    text-decoration: none;
+    color: var(--actionColour);
+}
+
+#skills a:visited{
+    color:var(--hoverColour)
+}
+#skills a:hover{
+    color:var(--accentColour)
+}
+
+#skills p:hover{
+    color: var(--neutralColour);
+}
+#skills h4:hover{
+    color: var(--neutralColour)
+}
+
+/* Contact */
+#contact h4:hover{
+    color: var(--neutralColour);
+}
+
+/* Footer  */
+
+#footer p{
+    display: flex;
+    justify-content: center;
+}
+
+/* Resume Page*/
+summary {
+    text-decoration-color: var(--accentColour);
+}
+
+.papper h4 {
+    display: inline-flex;
+}
+
+.h4 {
+    font-size: 41.89px;
+    list-style: none;
+}
+.h4:hover {
+    font-size: 55.89px;
+    list-style: none;
+}
+
+.resume a{
+    text-decoration: none;
+    color: var(--actionColour);
+}
+.resume a:hover{
+    text-decoration: underline;
+    color: var(--accentColour);
+}
+
+.resume{
+    h1,h2{
+        text-shadow: -3px -6px 12px var(--ctaColour);
+        
+
+    }
+    h1:hover , h2:hover{
+        color: white;
+        text-shadow: 2px 2px 2px var(--accentColour);
+    }
+
+}
